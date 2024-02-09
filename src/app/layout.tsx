@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}><div className="app-container">{children}<Navbar/></div></body>
+      <body className={inter.className}><div className="grid-container">{children}<Navbar/></div></body>
     </html>
   );
 }

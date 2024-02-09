@@ -51,11 +51,28 @@ body {
 /* Add your additional styles here for light and dark themes */
 
 
-
 a {
   text-decoration: none; // Remove underline
   color: inherit; // Inherit text color from the parent
     &:focus {
         outline: none; // Remove the default focus outline
       }
+}
+
+$navbar-width: 70px;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: $navbar-width 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'navbar main';
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto $navbar-width; // Swap the order for small screens
+    grid-template-areas:
+      'main'
+      'navbar';
+  }
 }
