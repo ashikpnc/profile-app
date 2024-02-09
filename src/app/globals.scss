@@ -4,6 +4,14 @@
   margin: 0;
 }
 
+/* Include Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Apply Montserrat to your desired elements */
+
+
+
+
 /* Light theme styles */
 :root {
   --background-color: #ffffff;
@@ -39,6 +47,7 @@ $accent-color: #c6effa;
 // Apply the colorful background to the body
 body {
   @include colorful-background;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // Feel free to add more styles for other elements in your application
