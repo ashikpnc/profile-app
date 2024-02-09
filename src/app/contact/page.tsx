@@ -1,11 +1,9 @@
-import React from 'react'
+import styles from "../page.module.scss";
 
-type Props = {}
+type Props = {};
 
 const Contact = (props: Props) => {
-  return (
-    <div>Contact</div>
-  )
-}
+  return <main className={styles.main}></main>;
+};
 
-export default Contact
+export default Contact;

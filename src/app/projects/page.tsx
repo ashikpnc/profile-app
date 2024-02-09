@@ -1,11 +1,9 @@
-import React from 'react'
+import styles from "../page.module.scss";
 
-type Props = {}
+type Props = {};
 
 const Projects = (props: Props) => {
-  return (
-    <div>Projects</div>
-  )
-}
+  return <main className={styles.main}></main>;
+};
 
-export default Projects
+export default Projects;
