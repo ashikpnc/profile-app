@@ -25,11 +25,23 @@
   }
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+// styles.scss
+
+$primary-color: #3498db; // Blue
+$secondary-color: #2ecc71; // Green
+$accent-color: #c6effa;
+
+// Mixin to create a gradient background
+@mixin colorful-background {
+  background: linear-gradient(to right, $primary-color, $secondary-color, $accent-color);
 }
 
+// Apply the colorful background to the body
+body {
+  @include colorful-background;
+}
+
+// Feel free to add more styles for other elements in your application
 .app-container{
   max-width: 1440px;
   max-height:100vh ;
