@@ -43,11 +43,17 @@ $accent-color: #1abc9c; // Turquoise Green
 @mixin colorful-background {
   background: linear-gradient(to right, $primary-color, $secondary-color, $accent-color);
 }
+@mixin mobile-friendly-background {
+  background: linear-gradient(to right, $primary-color, $accent-color);
+}
 
 // Apply the colorful background to the body
 body {
   @include colorful-background;
   font-family: 'Montserrat', sans-serif;
+  @media (max-width:768px) {
+    @include mobile-friendly-background
+  }
 }
 
 // Feel free to add more styles for other elements in your application
