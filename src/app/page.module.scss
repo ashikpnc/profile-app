@@ -1,5 +1,29 @@
+
 .main {
-  grid-area: main;
-  padding: 30px 20px;;
+    grid-area: main;
+  display: grid;
+    grid-template-rows: 1fr;
+    /* One row by default */
+    grid-template-columns: 0.7fr 1.3fr;
+    /* Two columns by default */
+    grid-gap: 10px;
+    /* Adjust the gap between columns if needed */
+    grid-template-areas:
+      'profile-card skill-card';
+    /* Name the columns */
+    padding: 30px 20px;
+    overflow: auto;
+    
+      @media (max-width: 768px) {
+        grid-template-rows: 0.7fr 1.3fr;
+        /* Two rows for small devices */
+        grid-template-columns: 1fr;
+        /* One column for small devices */
+        grid-template-areas:
+          'profile-card'
+          'skill-card';
+        /* Name the rows */
+          padding: 20px 10px;
+      }
 }
 

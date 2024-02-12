@@ -35,9 +35,9 @@
 
 // styles.scss
 
-$primary-color: #8e354a; // Beetroot Red
-$secondary-color: #663f4c; // Dark Beetroot
-$accent-color: #e53935; // Light Beetroot
+$primary-color: #3498db; // Dodger Blue
+$secondary-color: #2c3e50; // Dark Blue Gray
+$accent-color: #1abc9c; // Turquoise Green
 
 // Mixin to create a gradient background
 @mixin colorful-background {
@@ -54,7 +54,6 @@ body {
 .app-container{
   max-width: 1440px;
   max-height:100vh ;
-  overflow-y: auto;
 }
 
 /* Add your additional styles here for light and dark themes */
