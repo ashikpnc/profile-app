@@ -49,13 +49,13 @@ body {
   }
 
   // Night mode styles
-  @media (prefers-color-scheme: dark) {
-    @include dark-background;
+  // @media (prefers-color-scheme: dark) {
+  //   @include dark-background;
 
-    @media (max-width: 768px) {
-      @include mobile-friendly-dark-background;
-    }
-  }
+  //   @media (max-width: 768px) {
+  //     @include mobile-friendly-dark-background;
+  //   }
+  // }
 }
 
 // Feel free to add more styles for other elements in your application
