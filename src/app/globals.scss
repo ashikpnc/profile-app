@@ -11,48 +11,50 @@
 
 
 
-
-/* Light theme styles */
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-  }
-}
-
-/* Dark theme styles */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #1e1e1e;
-    --text-color: #ffffff;
-  }
-}
-
 // styles.scss
 
 $primary-color: #3498db; // Dodger Blue
 $secondary-color: #2c3e50; // Dark Blue Gray
 $accent-color: #1abc9c; // Turquoise Green
 
+// Dark colors for night mode
+$dark-primary-color: #000000; // Black
+$dark-secondary-color: #333333; // Dark Gray
+$dark-accent-color: #666666; // Dim Gray
+
 // Mixin to create a gradient background
 @mixin colorful-background {
   background: linear-gradient(to right, $primary-color, $secondary-color, $accent-color);
 }
+
+@mixin dark-background {
+  background: linear-gradient(to right, $dark-primary-color, $dark-secondary-color, $dark-accent-color);
+}
+
 @mixin mobile-friendly-background {
   background: linear-gradient(to right, $primary-color, $accent-color);
+}
+
+@mixin mobile-friendly-dark-background {
+  background: linear-gradient(to right, $dark-primary-color, $dark-accent-color);
 }
 
 // Apply the colorful background to the body
 body {
   @include colorful-background;
   font-family: 'Montserrat', sans-serif;
-  @media (max-width:768px) {
-    @include mobile-friendly-background
+
+  @media (max-width: 768px) {
+    @include mobile-friendly-background;
+  }
+
+  // Night mode styles
+  @media (prefers-color-scheme: dark) {
+    @include dark-background;
+
+    @media (max-width: 768px) {
+      @include mobile-friendly-dark-background;
+    }
   }
 }
 
